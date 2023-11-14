@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,20 +11,41 @@ body {
   
   .container {
     text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
   }
   
   input {
-    padding: 5px;
+    padding: 10px;
     margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
   button {
-    padding: 8px;
+    padding: 12px;
     cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
   }
   
-  #result {
-    margin-top: 20px;
-    font-weight: bold;
+  button:hover {
+    background-color: #45a049;
   }
   
+  #resultList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #resultList li {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
