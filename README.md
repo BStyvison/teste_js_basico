@@ -7,7 +7,7 @@
 - [x] 2. Questão de Lógica: Filtrar Elementos de um Array de Objetos
 ### Dado um array de objetos representando produtos, onde cada objeto tem propriedades como nome, preco e estoque, escreva uma função que retorna um novo array contendo apenas os produtos com preço superior a um valor específico.
 
-- [] 3. Questão de Lógica: Contar a Frequência de Elementos em um Array
+- [x] 3. Questão de Lógica: Contar a Frequência de Elementos em um Array
 ### Escreva uma função que aceita um array de elementos e retorna um objeto onde as chaves são os elementos únicos do array e os valores são a contagem de quantas vezes cada elemento aparece.
 
 - [x] 4. Questão de Lógica: Mesclar Dois Objetos
@@ -30,5 +30,5 @@
 - [x] 4. Questão de Lógica: Fatorial
 ### Escreva uma função em JavaScript para calcular o fatorial de um número.
 
-- [] 5. Questão de Lógica: Palíndromo
+- [x] 5. Questão de Lógica: Palíndromo
 ### Escreva uma função em JavaScript para verificar se uma palavra é um palindromo.Uma palavra é um palíndromo se ela é lida da mesma forma de trás para frente.
