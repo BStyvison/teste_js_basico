@@ -24,35 +24,33 @@ const books = [
       author: "Miguel de Cervantes",
       year: 1605
     }
-  ]
-
-
-  // encontrar o livro pelo titulo
-function findBookByTitle(titleDesired) {
-    let bookFound = null
-
-    books.forEach((book) => {
-        if(book.title === titleDesired) {
-            bookFound = book
-        }
-    })
-    return bookFound
-}
-
-//const bookFound = findBookByTitle(books, "Dom Quixote")
-
-function searchBook() {
-    const titleInput = document.getElementById('titleInput');
-    const resultDiv = document.getElementById('result');
+  ];
   
-    const desiredBook = findBookByTitle(books, titleInput.value);
+  function findBookByTitle(titleDesired) {
+    let bookFound = null;
+  
+    books.forEach((book) => {
+      if (book.title === titleDesired) {
+        bookFound = book;
+      }
+    });
+  
+    return bookFound;
+  }
+  
+  function searchBook() {
+    const titleInput = document.querySelector('#titleInput');
+    const resultDiv = document.querySelector('#result');
+  
+    const desiredBook = findBookByTitle(titleInput.value);
   
     if (desiredBook !== null) {
-      resultDiv.innerText = `Book found: ${desiredBook.title} by ${desiredBook.author}, published in ${desiredBook.year}.`;
+      resultDiv.innerText = `Livro encontrado: ${desiredBook.title} de ${desiredBook.author}, publicado em ${desiredBook.year}.`;
     } else {
-      resultDiv.innerText = 'Book not found.';
+      resultDiv.innerText = 'Livro não encontrado.';
     }
-}
+  }
+  
 
 
 //lista de produtos
