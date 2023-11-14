@@ -18,16 +18,16 @@
 
 ## PARTE02
 
-- [] 1. Questão de Lógica: Números Primos
+- [x] 1. Questão de Lógica: Números Primos
 ### Escreva uma função em JavaScript para verificar se um número é primo.
 
-- [] 2. Questão de Lógica: Inversão de String
+- [x] 2. Questão de Lógica: Inversão de String
 ### Escreva uma função em JavaScript que inverte uma string. Por exemplo, se a entrada for "hello", a saída deve ser "olleh".
 
-- [] 3. Questão de Lógica: Soma de Números Pares
+- [x] 3. Questão de Lógica: Soma de Números Pares
 ### Escreva uma função em JavaScript que retorna a soma dos números pares em um array
 
-- [] 4. Questão de Lógica: Fatorial
+- [x] 4. Questão de Lógica: Fatorial
 ### Escreva uma função em JavaScript para calcular o fatorial de um número.
 
 - [] 5. Questão de Lógica: Palíndromo

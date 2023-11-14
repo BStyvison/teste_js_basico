@@ -1,5 +1,10 @@
 const books = [
     {
+      title: "A arte da guerra",
+      author: "Sun Tzu",
+      year: 1772
+    },
+    {
       title: "A Origem das Espécies",
       author: "Charles Darwin",
       year: 1859
@@ -21,8 +26,9 @@ const books = [
     }
   ]
 
+
   // encontrar o livro pelo titulo
-function findBookByTitle(listOfBooks, titleDesired) {
+function findBookByTitle(titleDesired) {
     let bookFound = null
 
     books.forEach((book) => {
@@ -33,7 +39,20 @@ function findBookByTitle(listOfBooks, titleDesired) {
     return bookFound
 }
 
-const bookFound = findBookByTitle(books, "Dom Quixote")
+//const bookFound = findBookByTitle(books, "Dom Quixote")
+
+function searchBook() {
+    const titleInput = document.getElementById('titleInput');
+    const resultDiv = document.getElementById('result');
+  
+    const desiredBook = findBookByTitle(books, titleInput.value);
+  
+    if (desiredBook !== null) {
+      resultDiv.innerText = `Book found: ${desiredBook.title} by ${desiredBook.author}, published in ${desiredBook.year}.`;
+    } else {
+      resultDiv.innerText = 'Book not found.';
+    }
+}
 
 
 //lista de produtos
@@ -44,8 +63,8 @@ const products = [
         stock: 10  
     },
     {
-        name: "iphone 12",
-        price: 3200,
+        name: "iphone 13",
+        price: 3800,
         stock: 20 
     },
     { 
@@ -54,7 +73,7 @@ const products = [
         stock: 50
     },
     {
-        name: "Mouse logitech 403",
+        name: "Mouse logitech g403",
         price: 198,
         stock: 30
     }
@@ -65,6 +84,7 @@ function filterProductsByPrice(value) {
 }
 
 const filteredProducts = filterProductsByPrice(290)
+
 
 // Array de elementos
 const arrayOfElements = [1, 5, 2, 4, 2, 3, 2, 4, 1, 5, 3, 1, 4, 1, 5, 6, 14]
@@ -96,6 +116,7 @@ function mergeObjects(object1, object2) {
 
 const mergedObject = mergeObjects(objectA,objectB)
 
+
 //Remover duplicata de array
 const arrayWithDuplicates = [1, 1, 1, 2, 3, 3, 3, 4, 5, 5, 6];
 
@@ -111,5 +132,60 @@ const newArrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates)
 //verificar numeros primos
 
 function isPrimeNumbers(number) {
-    if(number % n === 0)
+    if(number <= 1 || number == null) {
+        return false
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+
+//inverter uma string
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+const reversedString = reverseString('Hello, world!')
+
+
+// Somar apenas numeros pares
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+function sumEvenNumbers(array) {
+    return array.filter(number => number % 2 === 0).reduce((soma, number) => soma + number, 0);
+}
+
+let sumEven = sumEvenNumbers(numbers)
+
+
+// Fatorial
+function calculateFactorial(number) {
+    if (number < 0) {
+        return "Erro: Não exite fatorial de um número negativo.";
+    } else if (number === 0 || number === 1) {
+        return 1;
+    } else {
+        let factorial = 1;
+        for (let i = 2; i <= number; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+}
+
+
+// Verificar palindromo
+function checkPalindrome(str) {
+    const strWithoutSpaces = str.toLowerCase().replace(/\s/g, '')
+    const strInverted = strWithoutSpaces.split('').reverse().join('')
+
+    if( strWithoutSpaces === strInverted ) {
+        return true
+    } else {
+        return false
+    }
 }
